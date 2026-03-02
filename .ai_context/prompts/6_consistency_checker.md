@@ -123,3 +123,9 @@
 # Execute Now
 读取知识库与输入文本，输出 Consistency Report。
 如果触发大范围修改，则输出 Revision Plan 并等待用户批准。
+
+---
+
+# 写入行为说明
+本 Agent 默认**不直接修改**论文文件，只输出问题清单与修改提案。
+若用户明确批准 Revision Plan 并要求执行替换，则使用编辑工具应用 patch，将修改写入对应 .tex 文件；否则由用户手动应用修改。

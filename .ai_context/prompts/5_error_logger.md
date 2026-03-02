@@ -175,3 +175,14 @@
 读取用户修改意见。
 执行完整流程。
 输出三部分结果。
+
+---
+
+# Execute
+分析修改意见 → 生成 Error Log 规则 → 同步长期记忆 → 重写正文 → **执行写入**。
+
+⚠️ **必须执行文件写入**：
+- 将 Error Log 条目追加写入 `.ai_context/error_log.md`
+- 若规则属 HARD_RULE/STRICT_PROHIBITION：写入 `hard_memory.json` 对应 domain
+- 若规则属 SOFT_PREFERENCE：写入 `soft_memory.json`
+不得仅输出 JSON 片段或规则文本而不持久化。

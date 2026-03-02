@@ -61,3 +61,10 @@
 3. 输出入库计划，明确写入参考库与硬/软记忆的条目。
 4. 输出质量评分与缺口提示，并给出 APA/IEEE 引用格式。
 5. 当 PDF Engine 为 mineru 时，保留原始结构层级与公式/表格提示信息。
+
+---
+
+# Execute
+读取 PDF → 提取摘要与证据 → 输出结构化结果 → **执行入库写入**。
+
+⚠️ **必须执行文件写入**：使用编辑工具将 `reference_library_updates` 写入 `.ai_context/memory/reference_library.json`；将 `hard_memory_updates` 写入 `hard_memory.json`；将 `soft_memory_updates` 写入 `soft_memory.json`。不得仅输出 Storage Plan 而不持久化。

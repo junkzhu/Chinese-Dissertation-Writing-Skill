@@ -167,4 +167,6 @@ domains.format_rules.key_values
 
 # Execute
 
-读取 PDF → 提取规则 → 输出结构化结果 → 生成 Memory Update Plan。
+读取 PDF → 提取规则 → 输出结构化结果 → 生成 Memory Update Plan → **执行写入**。
+
+⚠️ **必须执行文件写入**：使用编辑工具将 `hard_memory_updates` 实际写入 `.ai_context/memory/hard_memory.json`，不得仅输出计划而不持久化。

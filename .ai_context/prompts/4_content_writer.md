@@ -16,3 +16,8 @@
 - 遵循 \section{} \subsection{} 结构
 - 填写 \cite{} 占位，证据不足处标注 [Evidence Gap]
 - 遵守 Do's / Don'ts，避免 AI 味表达
+
+---
+
+# Execute
+若用户指定了目标文件路径（如 `chapters/method_1.tex`），**必须将生成内容写入该文件**；否则输出 LaTeX 正文供用户使用。
