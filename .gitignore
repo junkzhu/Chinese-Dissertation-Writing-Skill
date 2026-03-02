@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/
+.idea/
+*.pyc
+__pycache__/
+*.pdf
