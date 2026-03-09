@@ -17,6 +17,12 @@
 - 填写 \cite{} 占位，证据不足处标注 [Evidence Gap]
 - 遵守 Do's / Don'ts，避免 AI 味表达
 
+# 图片占位
+需要插图但尚未有图稿时，使用 `figures/` 下的占位路径，并可通过脚本生成空白占位图：
+- **脚本**：`.ai_context/scripts/create_placeholder_image.py`
+- **用法**：`python .ai_context/scripts/create_placeholder_image.py figures/文件名.png`，可选 `-w 宽度 -H 高度 -t "占位文字"`
+- **示例**：若正文引用 `\includegraphics{figures/related_work_xxx.png}`，可运行脚本创建同名占位图，避免编译缺失文件报错
+
 ---
 
 # Execute

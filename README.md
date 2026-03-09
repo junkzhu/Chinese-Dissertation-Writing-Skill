@@ -58,10 +58,10 @@ git clone https://github.com/junkzhu/Chinese-Dissertation-Writing-Skill.git
 | `1_format_spec_reader` | 解析格式规范 PDF → hard_memory |
 | `2_style_extractor` | 资料 → style_profile |
 | `3_section_builder` | 参考论文 → chapters 框架 |
-| `4_content_writer` | 按大纲起草正文 |
-| `5_error_logger` | 纠正 → error_log + 重写 |
+| `4_subsection_builder` | 生成章节内小标题结构 |
+| `5_content_writer` | 按大纲起草正文 |
 | `6_consistency_checker` | 术语 / 格式一致性审计 |
-| `7_subsection_builder` | 生成章节内小标题结构 |
+| `7_error_logger` | 纠正 → error_log + 重写 |
 
 ---
 
@@ -77,9 +77,10 @@ xelatex main && bibtex main && xelatex main && xelatex main
 - `@.ai_context/prompts/1_format_spec_reader.md` 阅读格式要求
 - `@.ai_context/prompts/2_style_extractor.md` 提取写作风格（资料/03、04）
 - `@.ai_context/prompts/3_section_builder.md` 参考范文创建 chapters 框架
-- `@.ai_context/prompts/4_content_writer.md` 按大纲起草正文
+- `@.ai_context/prompts/4_subsection_builder.md` 生成章节内小标题结构
+- `@.ai_context/prompts/5_content_writer.md` 按大纲起草正文
 - `@.ai_context/prompts/6_consistency_checker.md` 检查全文术语/格式一致性
-- 纠错后：把「不要用 X，应改为 Y」加入错题本（error_log）
+- `@.ai_context/prompts/7_error_logger.md` 纠错入错题本并重写
 
 ---
 
