@@ -4,3 +4,5 @@
 *.pyc
 __pycache__/
 *.pdf
+!资料/01_格式要求/*.pdf
+style_profile.md
