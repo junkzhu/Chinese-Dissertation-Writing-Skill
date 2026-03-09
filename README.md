@@ -56,6 +56,7 @@ git clone https://github.com/junkzhu/Chinese-Dissertation-Writing-Skill.git
 ### 5. 审核全文一致性
 
 > @6_consistency_checker 请检查全文一致性；
+
 > @6_consistency_checker 请检查参考文献 xxx.bib 的格式；
 
 ---
