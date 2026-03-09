@@ -42,11 +42,21 @@ git clone https://github.com/junkzhu/Chinese-Dissertation-Writing-Skill.git
     └── 提取/           ← parse_pdf 输出
 ```
 
-### 3. 提取风格
+### 3. 阅读毕业论文格式要求
+> @1_format_spec_reader 请解析格式规范
 
-将你的中期报告、初审稿、小论文等放入 `资料/03_我的内容/` 和 `资料/04_我的小论文/`，对 AI 说：
+### 4. 提取风格
 
-> 请用 Style Extractor 分析 资料/03_我的内容/ 和 资料/04_我的小论文/ 中的文章，生成 `.ai_context/style_profile.md`
+将他人通过的毕业论文放入 `资料/02_参考毕业论文/`
+将你的中期报告、初审稿、小论文等放入 `资料/03_我的内容/` 和 `资料/04_我的小论文/`
+
+> @2_style_extractor 请提取 资料/02_参考毕业论文/，资料/03_我的内容/ 和 资料/04_我的小论文/ 中的文章 的写作风格
+
+
+### 5. 审核全文一致性
+
+> @6_consistency_checker 请检查全文一致性；
+> @6_consistency_checker 请检查参考文献 xxx.bib 的格式；
 
 ---
 
@@ -110,7 +120,7 @@ xelatex main && bibtex main && xelatex main && xelatex main
 ## 文件结构
 
 ```
-AI-Thesis-Writing-Skill/
+<项目根目录>/
 ├── README.md
 ├── LICENSE
 ├── .ai_context/
@@ -125,8 +135,9 @@ AI-Thesis-Writing-Skill/
 │   ├── memory/               # hard / soft / reference_library
 │   ├── prompts/              # 0–7 号 prompts
 │   └── scripts/
-│       └── parse_pdf.py      # PDF 文本抽取
-├── .traerules                # 系统级工作流配置
+│       ├── parse_pdf.py           # PDF 文本抽取
+│       └── create_placeholder_image.py #创建空白占位图
+├── .traerules                # 系统级工作流配置（可选）
 └── .agents/workflows/        # 自动化流程
 ```
 
