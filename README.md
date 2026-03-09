@@ -67,15 +67,19 @@ git clone https://github.com/junkzhu/Chinese-Dissertation-Writing-Skill.git
 
 ## 常用指令
 
-> 请根据参考论文创建 LaTeX 项目框架（chapters + main.tex）
+**编译论文（在项目根目录）：**
+```bash
+xelatex main && bibtex main && xelatex main && xelatex main
+```
+或用 latexmk：`latexmk -xelatex main`
 
-> 用 Style Extractor 分析 资料/ 并更新 style_profile
-
-> 按 style_profile 和 error_log 写第 3 章 方法一
-
-> 不要用「我们提出」，加入错题本
-
-> 用 consistency-checker 检查全文术语一致性
+**对 AI 的常用提示：**
+- `@.ai_context/prompts/1_format_spec_reader.md` 阅读格式要求
+- `@.ai_context/prompts/2_style_extractor.md` 提取写作风格（资料/03、04）
+- `@.ai_context/prompts/3_section_builder.md` 参考范文创建 chapters 框架
+- `@.ai_context/prompts/4_content_writer.md` 按大纲起草正文
+- `@.ai_context/prompts/6_consistency_checker.md` 检查全文术语/格式一致性
+- 纠错后：把「不要用 X，应改为 Y」加入错题本（error_log）
 
 ---
 
